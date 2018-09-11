@@ -1,0 +1,362 @@
+@baseColor:#e92322;
+.wjs-header{
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #ccc;
+  .row{
+    height: 100%;
+    text-align: center;
+     >div:nth-of-type(-n+3){
+         border-right: 1px solid #ccc;
+        > .wjs_code{
+          position: relative;
+          display: block;
+          > img{
+            display: none;
+            position: absolute;
+            top:49px;
+            left: 50%;
+            transform:translateX(-50%) ;
+            border: 1px solid #ccc;
+            border-top: none;
+          }
+        &:hover{
+          > img{
+          display: block;
+
+          }
+        }
+        }
+     }
+     >div:nth-of-type(4) {
+       > .btn-danger {
+         background-color: @baseColor;
+         border-color: @baseColor;
+
+       }
+       > .btn {
+         padding: 3px 15px;
+       }
+       > .btn-link{
+         color: #ccc;
+       }
+
+     }
+  }
+  .navbar-toggle{
+    margin-top: 23px;
+  }
+}
+/*导航样式*/
+.wjs_nav{
+  .navbar-brand{
+    height: 80px;
+    line-height: 50px;
+   >.wjs_icon{
+     font-size: 40px;
+   }
+    >span:nth-child(1){
+      color: @baseColor;
+    }
+    >span:nth-child(2){
+      color: @baseColor;
+    }
+
+    }
+  /*修改导航的li样式*/
+  .navbar-nav{ >li >a{
+    height: 80px;
+    display: block;
+    line-height: 50px;
+  }
+  >a:hover,a:focus{
+    color: #777;
+    border-bottom: 3px solid @baseColor;
+
+  }
+  }
+  .active{
+    >a,a:hover,a:focus{
+      background-color:transparent;
+      border-bottom: 3px solid @baseColor;
+    }
+  }
+}
+
+/*轮播图*/
+.wjs-banner{
+  .mobileImg{
+    width: 100%;
+    display: block;
+
+
+    }
+  .mobileImg > img{
+    width: 100%;
+    display: block;
+  }
+  .pcimg{
+    width: 100%;
+    height: 410px;
+    display: block;
+    background-image: url("../images/slide_01_2000x410.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
+
+}
+
+/*信息块*/
+.wjs-info{
+  padding: 30px;
+   .wjs_icon{
+    font-size: 30px;
+  }
+  .row{
+    >div{
+    margin-top: 20px;
+      >a:hover{
+        color: @baseColor;
+    }
+
+   }
+  }
+}
+/*预约块*/
+.wjs-reverse{
+  height: 60px;
+  line-height: 60px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  .wjs_icon{
+    font-size: 18px;
+  }
+   .reverse_now{
+
+    color: @baseColor;
+    border-bottom: 1px dashed @baseColor ;
+  }
+  a:hover{
+    color: @baseColor;
+  }
+}
+.wjs-product{
+  clear: both;
+  background-color: #eee;
+  padding:20px;
+  >.tabs_parent{
+    width: 100%;
+    overflow: hidden;
+  }
+  .nav-tabs{
+    >li{
+    margin-bottom: 0px;
+    padding: 0px 14px;
+      > a{
+        line-height: 50px;
+        border-radius: 0px;
+        border: none;
+        background-color: transparent;
+      }
+      > a:hover{
+        border-bottom: 3px solid @baseColor;
+      }
+      &.active{
+        >a,a:hover,a:focus{
+          border: none;
+          border-radius: 0;
+          background-color: #eee;
+          border-bottom: 3px solid @baseColor;
+        }
+    }
+
+    }
+
+  }
+}
+.wjs_pBox{
+  height: 150px;
+  margin-top: 20px;
+  background-color: #fff;
+  >.wjs_pLeft{
+    position: relative;
+    margin-right: 100px;
+    height: 150px;
+    padding-top: 10px;
+    font-size: 12px;
+    >p{
+      width: 100%;
+text-align: center;
+      font-size: 16px;
+    }
+  > .row{
+    margin-left: -10px;
+    margin-right: -10px;
+    > div:nth-of-type(even){
+      text-align: right;
+    }
+  }
+  }
+  >.wjs_pRight{
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    border-left: 1px dotted #ccc;
+    text-align: center;
+    padding-top: 30px;
+    >.wjs-tip{
+      width: 100%;
+      position: absolute;
+    top:20px;
+    left: 50%;
+      transform: translateX(-50%);
+    >span:first-of-type{
+      color: red;
+      border: 1px solid red;
+    }
+      >span:last-of-type{
+        color: blue;
+        border: 1px solid blue;
+      }
+    }
+
+   >b{
+     font-size: 40px;
+color: @baseColor;
+   }
+    >sub{
+      color: @baseColor;
+      bottom: 0;
+    }
+    &::before,&::after{
+      content:"";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #eee;
+      left: -5px;
+    }
+    &::before{
+      top: -5px;
+      box-shadow: 0px 1px 1px #ddd inset;
+    }
+    &::after{
+      bottom: -5px;
+      box-shadow: 0px 1px 1px #ddd inset;
+
+    }
+
+  }
+
+
+
+  /*当前active的样式*/
+  &.active{
+    background-color: @baseColor;
+    >.wjs_pRight{
+      >b,sub,p{
+        color: #fff;
+        position: relative;
+      }
+
+    }
+    > .wjs_pLeft{
+
+      //background-color: #fff;
+
+      &::before{
+        color: #fff;
+      content: "\e915";
+        /*一定要记得设置字体*/
+        font-family: "wjs";
+        position: absolute;
+        left: 0;
+        top:-5px;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+/*新闻样式*/
+.wjs_news {
+  padding-top: 20px;
+  .wjs_nTitle {
+    line-height: 50px;
+    font-size: 25px;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      //background-color: #ccc;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      position: absolute;
+      bottom: -4px;
+      right: -8px;
+    }
+  }
+  .wjs_newsLine{
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    border-left: 1px dashed @baseColor;
+    left:45px;
+    top:0;
+  }
+  .nav-tabs {
+    > li {
+      margin-bottom: 60px;
+      > a {
+        background-color: #ccc;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+      }
+      > a:hover {
+        border: none;
+        background-color: @baseColor;
+      }
+      .wjs_icon {
+        font-size: 30px;
+        color: #fff;
+      }
+
+
+        }
+    > li:last-of-type {
+      margin-bottom: 0px;
+    }
+    @media screen and (min-width: 768px) and(max-width: 992px) {
+      > li {
+        margin: 20px 30px;
+      }
+
+      @media screen  and (max-width: 768px) {
+        > li {
+          margin: 20px 0px;
+          width: 25%;
+        }
+      }
+    }
+  }
+  .wjs_newslist{
+    list-style: none;
+    > li {
+      line-height:60px;
+    }
+  }
+}
+
+
+
+
+
